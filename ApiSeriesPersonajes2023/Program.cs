@@ -12,7 +12,8 @@ string connectionString =
     builder.Configuration.GetConnectionString("sqlseriespersonajes");
 builder.Services.AddTransient<RepositorySeries>();
 builder.Services.AddDbContext<SeriesContext>
-    (options => options.UseSqlServer(connectionString)); builder.Services.AddEndpointsApiExplorer();
+    (options => options.UseSqlServer(connectionString)); 
+builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(
     options => {
         options.SwaggerDoc("v1", new OpenApiInfo
